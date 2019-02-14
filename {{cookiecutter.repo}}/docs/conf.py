@@ -38,10 +38,6 @@ except ImportError:
 output_dir = __location__
 module_dir = os.path.join(__location__, "../src/{{cookiecutter.repo}}")
 test_dir = os.path.join(__location__, "../tests")
-try:
-    shutil.rmtree(output_dir)
-except FileNotFoundError:
-    pass
 
 try:
     import sphinx
