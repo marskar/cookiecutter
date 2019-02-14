@@ -33,6 +33,7 @@ Contents
    Authors <authors>
    Changelog <changelog>
    Module Reference <api/modules>
+   Test Reference <api/tests>
 
 
 Indices and tables

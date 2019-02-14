@@ -10,6 +10,7 @@ AUTODOCDIR    = api
 AUTODOCBUILD  = sphinx-apidoc
 PROJECT       = MYPROJECT
 MODULEDIR     = ../src/myproject
+TESTDIR       = ../tests
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $?), 1)
@@ -56,6 +57,7 @@ clean:
 $(AUTODOCDIR): $(MODULEDIR)
 	mkdir -p $@
 	$(AUTODOCBUILD) -f -o $@ $^
+	$(AUTODOCBUILD) -f -o $@ --tocfile tests $(TESTDIR)
 
 doc-requirements: $(AUTODOCDIR)
 
