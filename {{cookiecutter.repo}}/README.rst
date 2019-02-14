@@ -1,19 +1,19 @@
-=========
-MYPROJECT
-=========
+========================
+{{cookiecutter.project}}
+========================
 
 
-DESCRIPTION
+{{cookiecutter.description}}
 
 
-Description
-===========
+Project structure
+=================
 
-A longer description of your project goes here...
 
 
 Note
 ====
 
-This project has been set up using PyScaffold 3.1. For details and usage
-information on PyScaffold see https://pyscaffold.org/.
+This project has been set up using PyScaffold 3.1 and cookiecutter 1.6.
+For details and usage information on PyScaffold, see https://pyscaffold.org/.
+For details and usage information on cookiecutter, see https://cookiecutter.readthedocs.io/.

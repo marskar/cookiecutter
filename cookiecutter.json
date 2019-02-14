@@ -2,8 +2,10 @@
     "project": "project",
     "author": "Your name (or your organization/company/team)",
     "repo": "{{ cookiecutter.project.lower().replace(' ', '_') }}",
-    "username": "{{ cookiecutter.author.lower().replace(' ', '_') }}",
+    "user": "{{ cookiecutter.author.lower().replace(' ', '_') }}",
+    "email": "{{ cookiecutter.user.lower().replace(' ', '_') }}@gmail.com",
     "description": "A short description of the project.",
+    "githost": ["github", "gitlab", "bitbucket"],
     "license": ["MIT", "BSD-3-Clause", "No license file"],
     "version": "0.0.1"
 }
