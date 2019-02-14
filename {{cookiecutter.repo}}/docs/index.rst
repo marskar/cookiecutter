@@ -2,7 +2,7 @@
 {{cookiecutter.project}}
 ========================
 
-This is the documentation of {{cookiecutter.project}}.
+Welcome to the documentation of {{cookiecutter.project}}!
 
 .. note::
 
@@ -29,6 +29,7 @@ Contents
 .. toctree::
    :maxdepth: 2
 
+   Description <readme>
    License <license>
    Authors <authors>
    Changelog <changelog>
