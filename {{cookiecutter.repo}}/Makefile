@@ -18,12 +18,12 @@ major-release: major release
 
 
 .git/:
-	curl --user 'marskar' https://api.github.com/user/repos --data '{"name":"minimal","description":"Automate creation of figures, models, and plots with GNU Make."}'
-	test -f README.rst || echo "Minimal" >> README.rst
+	curl --user '{{ cookiecutter.user }}' https://api.github.com/user/repos --data '{"name":"{{ cookiecutter.repo }}","description":"{{ cookiecutter.description }}"}'
+	test -f README.rst || echo "{{ cookiecutter.project }}" >> README.rst
 	git init
 	git add --all
 	git commit --message "First commit"
-	git remote add origin https://github.com/marskar/minimal.git
+	git remote add origin https://github.com/{{cookiecutter.user}}/{{ cookiecutter.repo }}.git
 	git push --set-upstream origin master
 
 .venv/bin/activate: setup.py

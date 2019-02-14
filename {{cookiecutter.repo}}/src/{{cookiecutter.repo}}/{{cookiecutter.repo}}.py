@@ -24,7 +24,7 @@ from {{cookiecutter.repo}} import __version__
 
 __author__ = "{{cookiecutter.author}}"
 __copyright__ = "{{cookiecutter.author}}"
-__license__ = "mit"
+__license__ = "{{cookiecutter.license}}"
 
 _logger = logging.getLogger(__name__)
 

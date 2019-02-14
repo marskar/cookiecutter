@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 
 import pytest
-from myproject.skeleton import fib
+from {{cookiecutter.repo}}.{{cookiecutter.repo}} import fib
 
-__author__ = "Martin Skarzynski"
-__copyright__ = "Martin Skarzynski"
-__license__ = "mit"
+__author__ = "{{cookiecutter.author}}"
+__copyright__ = "{{cookiecutter.author}}"
+__license__ = "{{cookiecutter.license}}"
 
 
 def test_fib():

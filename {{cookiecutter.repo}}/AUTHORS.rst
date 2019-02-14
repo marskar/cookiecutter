@@ -2,4 +2,4 @@
 Contributors
 ============
 
-* Martin Skarzynski <marskar@gmail.com>
+* {{cookiecutter.author}} <{{cookiecutter.email}}>
