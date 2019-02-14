@@ -8,8 +8,8 @@ PAPER         =
 BUILDDIR      = _build
 AUTODOCDIR    = api
 AUTODOCBUILD  = sphinx-apidoc
-PROJECT       = MYPROJECT
-MODULEDIR     = ../src/myproject
+PROJECT       = {{cookiecutter.project}}
+MODULEDIR     = ../src/{{cookiecutter.repo}}
 TESTDIR       = ../tests
 
 # User-friendly check for sphinx-build

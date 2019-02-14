@@ -1,8 +1,8 @@
-=========
-MYPROJECT
-=========
+========================
+{{cookiecutter.project}}
+========================
 
-This is the documentation of **MYPROJECT**.
+This is the documentation of {{cookiecutter.project}}.
 
 .. note::
 
