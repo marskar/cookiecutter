@@ -35,8 +35,9 @@ try:  # for Sphinx >= 1.7
 except ImportError:
     from sphinx import apidoc
 
-output_dir = os.path.join(__location__, "api")
+output_dir = __location__
 module_dir = os.path.join(__location__, "../src/{{cookiecutter.repo}}")
+test_dir = os.path.join(__location__, "../tests")
 try:
     shutil.rmtree(output_dir)
 except FileNotFoundError:
@@ -46,14 +47,20 @@ try:
     import sphinx
     from pkg_resources import parse_version
 
-    cmd_line_template = "sphinx-apidoc -f -o {outputdir} {moduledir}"
-    cmd_line = cmd_line_template.format(outputdir=output_dir, moduledir=module_dir)
+    module_cmd_line_template = "sphinx-apidoc -f -o {outputdir} {moduledir}"
+    module_cmd_line = module_cmd_line_template.format(outputdir=output_dir, moduledir=module_dir)
+    module_args = module_cmd_line.split(" ")
 
-    args = cmd_line.split(" ")
+    test_cmd_line_template = "sphinx-apidoc -f -o {outputdir} {testdir} --tocfile tests"
+    test_cmd_line = test_cmd_line_template.format(outputdir=output_dir, testdir=test_dir)
+    test_args = test_cmd_line.split(" ")
+
     if parse_version(sphinx.__version__) >= parse_version('1.7'):
-        args = args[1:]
+        module_args = module_args[1:]
+        test_args = test_args[1:]
 
-    apidoc.main(args)
+    apidoc.main(module_args)
+    apidoc.main(test_args)
 except Exception as e:
     print("Running `sphinx-apidoc` failed!\n{}".format(e))
 
