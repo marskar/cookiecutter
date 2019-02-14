@@ -15,12 +15,12 @@ To get started, install cookiecutter:
 
 Then, run the ``cookiecutter`` command the following arguments:
 
-- --no-input
-- the template url (gh:marskar/cookiecutter)
-- project
-- author
-- user
-- description
+- ``--no-input``
+- the template url (``gh:marskar/cookiecutter``)
+- ``project``
+- ``author``
+- ``user``
+- ``description``
 
 ::
 
