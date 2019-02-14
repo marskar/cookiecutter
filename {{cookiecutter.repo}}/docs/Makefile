@@ -6,8 +6,6 @@ SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
 BUILDDIR      = _build
-AUTODOCDIR    = api
-AUTODOCBUILD  = sphinx-apidoc
 PROJECT       = {{cookiecutter.project}}
 MODULEDIR     = ../src/{{cookiecutter.repo}}
 TESTDIR       = ../tests
@@ -52,14 +50,13 @@ help:
 	@echo "  doctest    to run all doctests embedded in the documentation (if enabled)"
 
 clean:
-	rm -rf $(BUILDDIR)/* $(AUTODOCDIR)
+	rm -rf $(BUILDDIR)/*
 
-$(AUTODOCDIR): $(MODULEDIR)
-	mkdir -p $@
-	$(AUTODOCBUILD) -f -o $@ $^
-	$(AUTODOCBUILD) -f -o $@ --tocfile tests $(TESTDIR)
+autodoc: $(MODULEDIR) $(TESTDIR)
+	sphinx-apidoc -fo . $(MODULEDIR)
+	sphinx-apidoc -fo . $(TESTDIR) --tocfile tests
 
-doc-requirements: $(AUTODOCDIR)
+doc-requirements: autodoc
 
 html: doc-requirements
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html

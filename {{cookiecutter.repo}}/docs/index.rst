@@ -32,8 +32,8 @@ Contents
    License <license>
    Authors <authors>
    Changelog <changelog>
-   Module Reference <api/modules>
-   Test Reference <api/tests>
+   Module Reference <modules>
+   Test Reference <tests>
 
 
 Indices and tables
