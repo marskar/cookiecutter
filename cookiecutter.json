@@ -6,6 +6,6 @@
     "email": "{{ cookiecutter.user.lower().replace(' ', '_') }}@gmail.com",
     "description": "A short description of the project.",
     "githost": ["github", "gitlab", "bitbucket"],
-    "license": ["MIT", "BSD-3-Clause", "No license file"],
     "version": "0.0.1"
+    "license": ["MIT", "BSD", "ISC", "ASL2", "GPL3", "Not open source"]
 }
