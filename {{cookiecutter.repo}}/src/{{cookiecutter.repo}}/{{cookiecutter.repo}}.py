@@ -6,7 +6,7 @@ console script. To run this script uncomment the following lines in the
 [options.entry_points] section in setup.cfg:
 
     console_scripts =
-         fibonacci = myproject.skeleton:run
+         fibonacci = {{cookiecutter.repo}}.{{cookiecutter.repo}}:run
 
 Then run `python setup.py install` which will install the command `fibonacci`
 inside your current environment.
@@ -20,10 +20,10 @@ import argparse
 import sys
 import logging
 
-from myproject import __version__
+from {{cookiecutter.repo}} import __version__
 
-__author__ = "Martin Skarzynski"
-__copyright__ = "Martin Skarzynski"
+__author__ = "{{cookiecutter.author}}"
+__copyright__ = "{{cookiecutter.author}}"
 __license__ = "mit"
 
 _logger = logging.getLogger(__name__)
@@ -59,7 +59,7 @@ def parse_args(args):
     parser.add_argument(
         '--version',
         action='version',
-        version='MYPROJECT {ver}'.format(ver=__version__))
+        version='{{cookiecutter.project}} {ver}'.format(ver=__version__))
     parser.add_argument(
         dest="n",
         help="n-th Fibonacci number",
