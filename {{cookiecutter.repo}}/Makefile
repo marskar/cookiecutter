@@ -11,7 +11,7 @@ SRC = $(wildcard src/*/*.py)
 
 init: .git/
 env: .venv/bin/activate
-docs: docs/_build/html/index.html
+html: docs/_build/html/index.html
 patch-release: patch release
 minor-release: minor release
 major-release: major release
