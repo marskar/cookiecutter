@@ -3,7 +3,7 @@
     "author": "Your name (or your organization/company/team)",
     "repo": "{{ cookiecutter.project.lower().replace(' ', '_') }}",
     "user": "{{ cookiecutter.author.lower().replace(' ', '_') }}",
-    "email": "{{ cookiecutter.user.lower().replace(' ', '_') }}@gmail.com",
+    "email": "{{cookiecutter.user}}@gmail.com",
     "description": "A short description of the project.",
     "githost": ["github", "gitlab", "bitbucket"],
     "version": "0.0.1",
