@@ -1,11 +1,13 @@
 {
     "project": "project",
     "author": "Your name (or your organization/company/team)",
-    "repo": "{{ cookiecutter.project.lower().replace(' ', '_') }}",
-    "user": "{{ cookiecutter.author.lower().replace(' ', '_') }}",
-    "email": "{{cookiecutter.user}}@gmail.com",
+    "version": "0.0.1",
     "description": "A short description of the project.",
     "githost": ["github", "gitlab", "bitbucket"],
-    "version": "0.0.1",
-    "license": ["MIT", "BSD", "ISC", "ASL2", "GPL3", "Not open source"]
+    "license": ["MIT", "BSD", "ISC", "ASL2", "GPL3", "Not open source"],
+    "email_provider": ["gmail", "yahoo", "outlook"],
+    "repo": "{{ cookiecutter.project.lower().replace(' ', '_') }}",
+    "user": "{{ cookiecutter.author.lower().replace(' ', '_') }}",
+    "email": "{{ cookiecutter.user }}@{{ cookiecutter.email_provider }}.com",
+    "url": "https://{{ cookiecutter.githost }}.com/{{ cookiecutter.user }}/{{ cookiecutter.repo }}"
 }
