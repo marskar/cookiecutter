@@ -73,3 +73,8 @@ For details and usage information on Cookiecutter, see https://cookiecutter.read
 
 .. _PyScaffold: https://pyscaffold.org/
 .. _Cookiecutter: https://cookiecutter.readthedocs.io/
+
+
+.. image:: https://badges.gitter.im/py4ds/cookiecutter.svg
+   :alt: Join the chat at https://gitter.im/py4ds/cookiecutter
+   :target: https://gitter.im/py4ds/cookiecutter?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
